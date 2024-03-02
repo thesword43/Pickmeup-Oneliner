@@ -57,12 +57,11 @@ client.on("messageCreate", (msg) => {
   const filePath = path.join(__dirname, 'data', 'songs.txt');
 const titles = fs.readFileSync(filePath, 'utf-8').split('\n').map(title => title.trim());
 
-// Check if any title is mentioned in the message content
 for (const title of titles) {
   if (msg.content.toLowerCase().includes(title.toLowerCase())) {
     msg.react(renLetsGoEmojiId)
       .catch((error) => console.error("Error adding reaction:", error));
-    break; // Stop checking once a match is found
+    break; 
   }
 }
 

@@ -54,160 +54,17 @@ client.on("messageCreate", (msg) => {
 
   /* SONG REACTIONS */
 
-  if (msg.content.toLowerCase().includes("hi ren")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
+  const filePath = path.join(__dirname, 'data', 'songs.txt');
+const titles = fs.readFileSync(filePath, 'utf-8').split('\n').map(title => title.trim());
 
-  if (msg.content.toLowerCase().includes("money game")) {
+// Check if any title is mentioned in the message content
+for (const title of titles) {
+  if (msg.content.toLowerCase().includes(title.toLowerCase())) {
     msg.react(renLetsGoEmojiId)
       .catch((error) => console.error("Error adding reaction:", error));
+    break; // Stop checking once a match is found
   }
-
-  if (msg.content.toLowerCase().includes("eden")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("uninvited")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("murderer")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("animal flow")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("genesis")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("the hunger")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("sick boi")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("jenny")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("screech")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("violet")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("losing it")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("chalk outlines")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("humble")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("freckled angels")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("blind eyed")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("crutch")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("dominoes")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("children of the moon")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("life is funny")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("dear god")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("power")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("bittersweet symphony")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("for joe")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("what you want")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("lost all faith")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("masochist")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("illest of our time")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("right here right now")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
-
-  if (msg.content.toLowerCase().includes("diazepam")) {
-    msg.react(renLetsGoEmojiId)
-      .catch((error) => console.error("Error adding reaction:", error));
-  }
+}
 
 /* PICK ME UP CODE */
 
